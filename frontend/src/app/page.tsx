@@ -2,6 +2,11 @@ import Link from 'next/link';
 
 import EmailForm from './EmailForm';
 
+export const metadata = {
+  title: 'Home | Open Dev Net',
+  description: 'The Open Developer Network collaboration platform.',
+};
+
 export default function Home() {
   return (
     <div className="absolute left-1/2 top-1/2 w-11/12 -translate-x-1/2 -translate-y-1/2 text-center">

@@ -18,6 +18,10 @@ export default function Header() {
       title: 'About',
       href: '/about',
     },
+    {
+      title: 'Devs',
+      href: '/devs',
+    },
   ];
 
   const urlSplit = pathname.split('/');

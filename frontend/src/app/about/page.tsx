@@ -1,3 +1,8 @@
+export const metadata = {
+  title: 'About | Open Dev Net',
+  description: 'The Open Developer Network collaboration platform.',
+};
+
 export default function About() {
   const styles = {
     title: 'block text-2xl font-medium text-white',
@@ -7,7 +12,7 @@ export default function About() {
   };
 
   return (
-    <div className="mx-auto my-20 w-11/12 max-w-2xl font-light leading-relaxed text-gray-300">
+    <div className="mx-auto my-5 w-11/12 max-w-2xl font-light leading-relaxed text-gray-300 sm:my-10 lg:my-20">
       <h1 className={styles.title}>📜 About ODN</h1>
       <p className={styles.paragraph}>
         👋 Hey, we&apos;re the team behind Open Dev Net, a group of developers
