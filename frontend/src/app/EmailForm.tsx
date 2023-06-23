@@ -53,9 +53,16 @@ export default function EmailForm() {
     }
 
     try {
-      const res = await axios.post(`${config.API_URL}/email/add`, {
-        email,
-      });
+      const res = await axios.post(
+        `${config.API_URL}/email/add`,
+        {
+          email,
+        },
+        {
+          timeout: 5000,
+          withCredentials: true,
+        }
+      );
 
       if (res.status === 200) {
         dispatch(

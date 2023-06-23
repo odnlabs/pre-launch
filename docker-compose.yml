@@ -1,18 +1,19 @@
 version: '3.3'
 services:
-  # backend:
-  #   build: ./backend
-  #   environment:
-  #     NODE_ENV: production
-  #   env_file:
-  #     - .env
-  #   ports:
-  #     - '5000:5000'
-  #   restart: on-failure
-  #   depends_on:
-  #     - nginx
-  #   networks:
-  #     - app-network
+  backend:
+    build: ./backend
+    environment:
+      NODE_ENV: production
+    env_file:
+      - .env
+    ports:
+      - '5000:5000'
+    restart: on-failure
+    depends_on:
+      - nginx
+    networks:
+      - app-network
+
   frontend:
     build: ./frontend
     environment:
@@ -23,6 +24,7 @@ services:
       - '3000:3000'
     networks:
       - app-network
+
   nginx:
     image: nginx:latest
     volumes:
