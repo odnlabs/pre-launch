@@ -1,8 +1,7 @@
-import { Api } from 'express-custom';
+import express, { Api } from 'express-custom';
 
 import { ensureDirectories } from '@slekup/utils';
 import cors from 'cors';
-import express from 'express-custom';
 import helmet from 'helmet';
 import hpp from 'hpp';
 
