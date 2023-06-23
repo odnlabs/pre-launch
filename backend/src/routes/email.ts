@@ -1,5 +1,6 @@
 import config from '@/config';
 import { EmailModel } from '@/models/Email';
+import logger from '@/utils/logger';
 import axios from 'axios';
 import { Endpoint } from 'express-custom';
 
@@ -23,7 +24,7 @@ export const addEmail = new Endpoint({
     })
   )
   .setController<{ body: { email: string } }>(async (req, res) => {
-    console.log(req.body.email);
+    logger.info(req.body.email);
     const exists = await EmailModel.exists({ email: req.body.email });
 
     if (exists)
