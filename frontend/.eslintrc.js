@@ -34,6 +34,7 @@ module.exports = {
     'import/first': 0, // Reports any imports that come after non-import statements
     'import/extensions': 0, // Ensures consistent use of file extension within the import path
     'import/no-extraneous-dependencies': 0, // Disallows importing packages that are not specified as dependencies
+    'import/prefer-default-export': 0, // Prefer a default export if module exports a single name
 
     // JSDoc (documentation) rules
     'jsdoc/require-jsdoc': [
