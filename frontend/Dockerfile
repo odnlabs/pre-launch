@@ -39,7 +39,6 @@ COPY --from=BUILD_IMAGE --chown=nextjs:nodejs /app/package*.json ./
 COPY --from=BUILD_IMAGE --chown=nextjs:nodejs /app/node_modules ./node_modules
 COPY --from=BUILD_IMAGE --chown=nextjs:nodejs /app/public ./public
 COPY --from=BUILD_IMAGE --chown=nextjs:nodejs /app/.next ./.next
-COPY --from=BUILD_IMAGE --chown=nextjs:nodejs /app/config ./config
 # Additional config files that the app needs
 COPY --from=BUILD_IMAGE --chown=nextjs:nodejs /app/next.config.js  ./
 COPY --from=BUILD_IMAGE --chown=nextjs:nodejs /app/tailwind.config.js  ./
