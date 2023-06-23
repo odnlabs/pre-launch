@@ -1,0 +1,13 @@
+{
+  "name": "pre-launch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "precommit": "cd backend && npm run precommit && cd .. && cd frontend && npm run precommit && cd ..",
+    "prepare": "husky install"
+  }
+}

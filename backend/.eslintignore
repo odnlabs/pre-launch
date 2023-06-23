@@ -1,0 +1,9 @@
+.github/
+.husky/
+.vscode/
+dist/
+documentation/
+node_modules/
+static/
+tmp/
+package-lock.json

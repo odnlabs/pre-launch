@@ -1,0 +1,75 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "NodeNext",
+    "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
+    "outDir": "dist",
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitThis": true,
+    "strictPropertyInitialization": false,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": false,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "importHelpers": true,
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+    }
+  },
+  "include": [
+    "src/**/*",
+    "environment.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "typedocOptions": {
+    "name": "Slekup API | Backend Documentation",
+    "customTitle": "Slekup API | Backend Documentation",
+    "customTitleLink": "https://slekup.github.io/slekup-api/",
+    "customDescription": "The official backend documentation for the Slekup API.",
+    "plugin": [
+      "typedoc-plugin-mdn-links",
+      "typedoc-plugin-extras",
+      "typedoc-plugin-djs-links"
+    ],
+    "entryPoints": [
+      "src"
+    ],
+    "entryPointStrategy": "Expand",
+    "exclude": [
+      "node_modules",
+      "**/*.spec.ts"
+    ],
+    "externalPattern": [
+      "**/node_modules/**"
+    ],
+    "includes": [
+      "src"
+    ],
+    "out": "docs",
+    "includeVersion": true,
+    "readme": "README.md",
+    "showConfig": false,
+    "favicon": "https://slekup.com/favicon.ico"
+  }
+}
