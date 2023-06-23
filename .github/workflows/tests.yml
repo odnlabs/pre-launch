@@ -19,10 +19,7 @@ jobs:
           node-version: 18.x
 
       - name: Install dependencies
-        run: npm install
+        run: npm install && cd backend && npm install && cd ../frontend && npm install && cd ..
 
       - name: Lint & Build
-        run: npm run lint
-
-      - name: Format
-        run: npm run format
+        run: npm run precommit
