@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import config from '@config';
+import axios from 'axios';
 import EmailForm from './EmailForm';
 
 export const metadata = {
@@ -7,7 +9,27 @@ export const metadata = {
   description: 'The Open Developer Network collaboration platform.',
 };
 
-export default function Home() {
+const getCount = async (): Promise<number | string> => {
+  try {
+    const res = await axios.get(`${config.API_URL}/notify`, {
+      timeout: 1000,
+    });
+
+    const data = res.data as { count: number };
+
+    if (!data.count) {
+      return '?';
+    }
+
+    return data.count;
+  } catch (error) {
+    return '?';
+  }
+};
+
+export default async function Home() {
+  const count = await getCount();
+
   return (
     <div className="absolute left-1/2 top-1/2 w-11/12 -translate-x-1/2 -translate-y-1/2 text-center">
       <h1 className="block text-6xl font-black sm:text-7xl lg:text-8xl">
@@ -25,7 +47,9 @@ export default function Home() {
         </Link>
       </p>
       <EmailForm />
-      <p className="mt-3 text-gray-500">Notify me when app is launched</p>
+      <p className="mt-3 text-gray-500">
+        Notify me when app is launched. {count} signups so far!
+      </p>
     </div>
   );
 }
