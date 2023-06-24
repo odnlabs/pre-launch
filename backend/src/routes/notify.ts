@@ -7,7 +7,7 @@ import { Endpoint } from 'express-custom';
 export const addEmail = new Endpoint({
   name: 'Add Email',
   description: 'Add an email to the database.',
-  path: '/add',
+  path: '/',
   method: 'POST',
   errorResponse: {
     status: 500,
@@ -47,3 +47,22 @@ export const addEmail = new Endpoint({
       } email has been added to the notify list. Total: ${await EmailModel.countDocuments()}`,
     });
   });
+
+export const getCount = new Endpoint({
+  name: 'Get email count',
+  description: 'Get the email count for the notify list',
+  path: '/',
+  method: 'GET',
+  errorResponse: {
+    status: 500,
+    message: 'An error occurred while getting the email count.',
+  },
+}).setController(async (req, res) => {
+  const count = await EmailModel.countDocuments();
+
+  res.json({
+    status: 200,
+    message: 'Successfully got email count.',
+    count,
+  });
+});

@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Developers | Open Dev Net',
+  description: 'The Open Developer Network collaboration platform.',
+};
+
 export default function Developers() {
   const devList = [
     {

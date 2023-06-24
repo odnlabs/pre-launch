@@ -4,7 +4,7 @@ import { Outfit } from 'next/font/google';
 import Toasts from '@components/global/Toasts/Toasts';
 import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
-import Provider from '@components/layout/Provider';
+import Providers from '@components/layout/Providers';
 
 const font = Outfit({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
@@ -26,7 +26,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <Provider>
+      <Providers>
         <body className={font.className}>
           <Toasts />
 
@@ -40,7 +40,7 @@ export default function RootLayout({
             </div>
           </div>
         </body>
-      </Provider>
+      </Providers>
     </html>
   );
 }

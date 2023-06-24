@@ -28,6 +28,7 @@ RUN npm run build
 # Create the production-ready image - final output of build
 FROM node:18-alpine
 ENV NODE_ENV production
+ENV NEXT_PUBLIC_APP_NODE_ENV production
 # Add a new group called nodejs, with GID 1001
 RUN addgroup -g 1001 -S nodejs
 # Add a new user called nextjs, with UID/GID 1001, to run as a non-root user
