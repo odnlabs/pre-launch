@@ -1,12 +1,14 @@
 import { Group, Route } from 'express-custom';
 
-import { addEmail } from './email';
+import * as notify from './notify';
 
 const route = new Route({
-  name: 'Email',
-  description: 'The email route.',
-  path: '/email',
-}).addEndpoint(addEmail);
+  name: 'Notify',
+  description: 'The notify route.',
+  path: '/notify',
+})
+  .addEndpoint(notify.addEmail)
+  .addEndpoint(notify.getCount);
 
 export const websiteGroup = new Group({
   name: 'Website',
