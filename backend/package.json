@@ -9,10 +9,9 @@
   "scripts": {
     "build": "npm run clean && tsc --build --verbose && tsc-alias && npm run copy",
     "clean": "rimraf dist",
-    "copy": "npm run copy:config && npm run copy:constants && npm run copy:env",
+    "copy": "npm run copy:config && npm run copy:constants",
     "copy:config": "copyfiles -u 1 ./config/**/*.yaml ./dist/config",
     "copy:constants": "copyfiles -u 1 ./src/constants/**/*.* ./dist/src",
-    "copy:env": "cp .env ./dist/.env",
     "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts",
     "docs": "rimraf docs && typedoc",
     "format": "prettier --write \"src/**/*.ts\"",
