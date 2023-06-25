@@ -22,7 +22,7 @@
     "lint:fix": "eslint --fix src/**/* --ext .ts && tsc --noEmit",
     "migrate": "ts-node './src/migrations/index.ts",
     "precommit": "npm run lint:fix && npm run format",
-    "start": "node -r dist/src/register.js dist/src/cluster.js"
+    "start": "node -r dist/register.js dist/index.js"
   },
   "prettier": {
     "arrowParens": "always",
