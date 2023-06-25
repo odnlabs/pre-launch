@@ -5,7 +5,7 @@ services:
     environment:
       NODE_ENV: production
     env_file:
-      - .env
+      - ./backend/.env
     ports:
       - '5000:5000'
     restart: on-failure
