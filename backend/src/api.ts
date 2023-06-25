@@ -16,7 +16,7 @@ databaseConnection();
 
 const api = new Api({
   url: config.API_URL,
-  port: parseInt(config.env.PORT, 10),
+  port: parseInt(config.env.PORT, 10) || 5000,
 });
 
 api.addMiddleware((req, res, next) => {
