@@ -31,7 +31,7 @@
     "paths": {
       "@/*": [
         "./src/*"
-      ],
+      ]
     }
   },
   "include": [
@@ -41,35 +41,5 @@
   "exclude": [
     "node_modules",
     "dist"
-  ],
-  "typedocOptions": {
-    "name": "Slekup API | Backend Documentation",
-    "customTitle": "Slekup API | Backend Documentation",
-    "customTitleLink": "https://slekup.github.io/slekup-api/",
-    "customDescription": "The official backend documentation for the Slekup API.",
-    "plugin": [
-      "typedoc-plugin-mdn-links",
-      "typedoc-plugin-extras",
-      "typedoc-plugin-djs-links"
-    ],
-    "entryPoints": [
-      "src"
-    ],
-    "entryPointStrategy": "Expand",
-    "exclude": [
-      "node_modules",
-      "**/*.spec.ts"
-    ],
-    "externalPattern": [
-      "**/node_modules/**"
-    ],
-    "includes": [
-      "src"
-    ],
-    "out": "docs",
-    "includeVersion": true,
-    "readme": "README.md",
-    "showConfig": false,
-    "favicon": "https://slekup.com/favicon.ico"
-  }
+  ]
 }
