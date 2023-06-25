@@ -7,14 +7,13 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run clean && tsc --build --verbose && npm run copy",
+    "build": "npm run clean && tsc --build --verbose && tsc-alias && npm run copy",
     "clean": "rimraf dist",
-    "copy": "npm run copy:config && npm run copy:constants && npm run copy:env && npm run copy:register",
+    "copy": "npm run copy:config && npm run copy:constants && npm run copy:env",
     "copy:config": "copyfiles -u 1 ./config/**/*.yaml ./dist/config",
     "copy:constants": "copyfiles -u 1 ./src/constants/**/*.* ./dist/src",
     "copy:env": "cp .env ./dist/.env",
-    "copy:register": "cp register.js ./dist/register.js",
-    "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register ./src/index.ts",
     "docs": "rimraf docs && typedoc",
     "format": "prettier --write \"src/**/*.ts\"",
     "format:check": "prettier --check \"src/**/*.ts\"",
@@ -22,7 +21,7 @@
     "lint:fix": "eslint --fix src/**/* --ext .ts && tsc --noEmit",
     "migrate": "ts-node './src/migrations/index.ts",
     "precommit": "npm run lint:fix && npm run format",
-    "start": "node -r dist/register.js dist/index.js"
+    "start": "node ./dist/index.js"
   },
   "prettier": {
     "arrowParens": "always",
@@ -45,7 +44,6 @@
     "helmet": "^7.0.0",
     "hpp": "^0.2.3",
     "mongoose": "^7.3.1",
-    "tsconfig-paths": "^4.2.0",
     "winston": "^3.9.0"
   },
   "devDependencies": {
@@ -71,6 +69,8 @@
     "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.6",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.3"
   }
 }
