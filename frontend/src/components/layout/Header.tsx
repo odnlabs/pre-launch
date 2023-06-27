@@ -69,6 +69,7 @@ export default function Header() {
         <a
           href="https://github.com/open-dev-net"
           target="_blank"
+          rel="noopener noreferrer"
           className="mr-3 text-gray-400 hover:text-white"
         >
           <BsGithub className="h-5 w-5" />
@@ -76,6 +77,7 @@ export default function Header() {
         <a
           href="https://www.linkedin.com/company/opendevnet/"
           target="_blank"
+          rel="noopener noreferrer"
           className="text-gray-400 hover:text-white"
         >
           <BsLinkedin className="h-5 w-5" />

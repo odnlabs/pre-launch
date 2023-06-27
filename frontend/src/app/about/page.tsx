@@ -46,6 +46,7 @@ export default function About() {
         <a
           href="https://github.com/open-dev-net/.github/blob/main/CONTRIBUTING.md/"
           target="_blank"
+          rel="noopener noreferrer"
           className="link"
         >
           Contributing Guidelines
@@ -55,6 +56,7 @@ export default function About() {
         <a
           href="mailto:slekupvimplyrataqq@protonmail.com"
           target="_blank"
+          rel="noopener noreferrer"
           className="link"
         >
           slekupvimplyrataqq@protonmail.com
