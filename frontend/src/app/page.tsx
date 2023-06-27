@@ -40,8 +40,9 @@ export default async function Home() {
           Soon
         </span>
       </h1>
-      <p className="mx-auto mt-10 max-w-sm text-lg text-gray-300">
-        The open-source messaging and collaboration platform for developers.{' '}
+      <p className="mx-auto mt-10 max-w-lg text-lg text-gray-300">
+        The open-source social platform for developers to collaborate, find
+        opportunities, and streamline workflows.{' '}
         <Link href="/about" className="link">
           Learn more
         </Link>
