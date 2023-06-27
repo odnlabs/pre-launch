@@ -2,24 +2,21 @@ version: '3.3'
 services:
   backend:
     build: ./backend
+    env_file:
+      - .env
     environment:
       NODE_ENV: production
-    env_file:
-      - ./backend/.env
     ports:
       - '5000:5000'
-    restart: on-failure
-    depends_on:
-      - nginx
     networks:
       - app-network
 
   frontend:
     build: ./frontend
-    environment:
-      NODE_ENV: production
     env_file:
-      - ./frontend/.env
+      - .env
+    environment:
+      NEXT_PUBLIC_APP_NODE_ENV: production
     ports:
       - '3000:3000'
     networks:
@@ -34,6 +31,7 @@ services:
       - '443:443'
       - '80:80'
     depends_on:
+      - backend
       - frontend
     networks:
       - app-network

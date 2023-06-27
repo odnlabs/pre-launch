@@ -8,6 +8,7 @@ import hpp from 'hpp';
 import config from '@/config';
 import { websiteGroup } from './routes';
 import databaseConnection from './utils/databaseConnection';
+import logger from './utils/logger';
 
 ensureDirectories([['/tmp'], ['/tmp/logs'], [`/tmp/logs/${config.logFolder}`]]);
 
@@ -17,6 +18,16 @@ databaseConnection();
 const api = new Api({
   url: config.API_URL,
   port: parseInt(config.env.PORT, 10) || 5000,
+});
+
+// Log all requests
+api.addMiddleware((req, res, next) => {
+  logger.debug(
+    `${req.method} ${req.originalUrl} [${req.ip}] (${
+      req.headers['user-agent'] ?? 'no agent'
+    })`
+  );
+  next();
 });
 
 api.addMiddleware((req, res, next) => {
