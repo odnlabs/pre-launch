@@ -32,6 +32,7 @@ export default function Developers() {
           <a
             href={`https://github.com/${dev.username}`}
             target="_blank"
+            rel="noopener noreferrer"
             className="w-full p-5 sm:w-1/2 md:w-1/3"
             key={index}
           >
