@@ -18,6 +18,7 @@ databaseConnection();
 const api = new Api({
   url: config.API_URL,
   port: parseInt(config.env.PORT, 10) || 5000,
+  path: '/api',
 });
 
 // Log all requests
