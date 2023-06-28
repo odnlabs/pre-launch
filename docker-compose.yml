@@ -3,7 +3,7 @@ services:
   backend:
     build: ./backend
     env_file:
-      - .env
+      - ./backend/.env
     environment:
       NODE_ENV: production
     ports:
@@ -14,7 +14,7 @@ services:
   frontend:
     build: ./frontend
     env_file:
-      - .env
+      - ./frontend/.env
     environment:
       NEXT_PUBLIC_APP_NODE_ENV: production
     ports:
