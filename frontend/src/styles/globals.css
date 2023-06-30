@@ -21,6 +21,11 @@ body {
   @apply focus:outline-none;
 }
 
+*:focus-visible {
+  outline: none !important;
+  @apply rounded-md ring focus-visible:ring-blue-400;
+}
+
 .no-select {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
