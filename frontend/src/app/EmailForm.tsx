@@ -54,7 +54,7 @@ export default function EmailForm() {
 
     try {
       const res = await axios.post(
-        `${config.API_URL}/notify`,
+        `${config.PUBLIC_API_URL}/notify`,
         {
           email,
         },

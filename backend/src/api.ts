@@ -53,7 +53,7 @@ api.addMiddleware(hpp());
 
 api.addMiddleware(
   cors({
-    origin: [config.WEBSITE_URL],
+    origin: [config.WEBSITE_URL, 'http://frontend:3000'],
     credentials: true,
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],

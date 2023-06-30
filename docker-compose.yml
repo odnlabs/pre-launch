@@ -14,11 +14,13 @@ services:
   frontend:
     build: ./frontend
     env_file:
-      - ./frontend/.env
+      - ./frontend/.env.local
     environment:
       NEXT_PUBLIC_APP_NODE_ENV: production
     ports:
       - '3000:3000'
+    depends_on:
+      - backend
     networks:
       - app-network
 

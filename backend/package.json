@@ -58,7 +58,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-typescript": "^3.5.5",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsdoc": "^46.4.0",
+    "eslint-plugin-jsdoc": "^46.4.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.1.1",
@@ -70,6 +70,6 @@
     "ts-node-dev": "^2.0.0",
     "tsc-alias": "^1.8.6",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.1.5"
+    "typescript": "^5.1.6"
   }
 }
