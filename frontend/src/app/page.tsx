@@ -9,6 +9,8 @@ export const metadata = {
   description: 'The Open Developer Network collaboration platform.',
 };
 
+export const revalidate = 0;
+
 const getCount = async (): Promise<number | string> => {
   try {
     const res = await axios.get(`${config.API_URL}/notify`, {
@@ -17,12 +19,13 @@ const getCount = async (): Promise<number | string> => {
 
     const data = res.data as { count: number };
 
-    if (!data.count) {
-      return '?';
+    if (typeof data.count !== 'number') {
+      return '??';
     }
 
     return data.count;
   } catch (error) {
+    console.error(error);
     return '?';
   }
 };
