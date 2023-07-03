@@ -26,7 +26,7 @@
     "@reduxjs/toolkit": "^1.9.5",
     "@slekup/utils": "^0.0.16",
     "axios": "^1.4.0",
-    "builder-validation": "^0.0.2",
+    "builder-validation": "^0.0.3",
     "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
