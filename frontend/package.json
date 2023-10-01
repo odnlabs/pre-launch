@@ -23,7 +23,7 @@
     "useTabs": false
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
+    "@reduxjs/toolkit": "^1.9.6",
     "@slekup/utils": "^0.0.16",
     "axios": "^1.4.0",
     "builder-validation": "^0.0.3",
